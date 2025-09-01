@@ -41,6 +41,8 @@ html, body {
       color: white;
     }
 
+
+
     .logo img {
       height: 70px;
     }
@@ -405,8 +407,6 @@ html, body {
     }
 
     /* RESPONSIVIDADE--------------------------------------------- */
-    /* --- RESPONSIVIDADE --- */
-
 /* Tablets e notebooks pequenos */
 @media (max-width: 1024px) {
   header {
@@ -417,11 +417,14 @@ html, body {
   .intro-layout, .final-page {
     flex-direction: column;
     align-items: center;
+    gap:10px;
   }
 
   .intro, .intro-side, .final-intro, .other-page {
-    width: 100%;
-    max-width: 95%;
+    width: 90%;
+
+    scale: 0.9;
+    padding: 20px;
   }
 
   .gif-img, .gif-img-2 {
@@ -437,7 +440,7 @@ html, body {
     flex-wrap: wrap;
     gap: 1em;
     height: auto;
-    padding: 10px;
+    padding: 5px;
   }
 
   .logo img {
