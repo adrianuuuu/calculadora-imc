@@ -190,6 +190,8 @@
       const divYes = document.querySelector(".button-yes");
       const divNo = document.querySelector(".other-page");
 
+      
+
       function toggleDiv(showDiv, hideDiv) {
         hideDiv.classList.remove("show-content");
         showDiv.classList.add("show-content");
@@ -202,3 +204,10 @@
       btnNo.addEventListener("click", () => {
         toggleDiv(divNo, divYes);
       });
+
+      const hamburger = document.getElementById('hamburger');
+const menuLinks = document.getElementById('menuLinks');
+
+hamburger.addEventListener('click', () => {
+  menuLinks.classList.toggle('active');
+});
