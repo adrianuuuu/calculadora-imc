@@ -12,14 +12,57 @@
   <div class="blur-overlay" id="blurOverlay"></div>
 
   <header id="header">
+    <button class="hamburger" id="hamburger">&#9776;</button>
     <a href="index.html" class="logo" id="logoArea">
       <img src="https://w7.pngwing.com/pngs/808/253/png-transparent-health-fitness-and-wellness-workplace-wellness-austell-health-and-wellness-dr-keith-braswell-logo-health-blue-text-silhouette.png" alt="Logo Bem-estar">
     </a>
-    <div class="menu" data-menu="dicas"><a href="#">Dicas</a></div>
-    <div class="menu" data-menu="ebooks"><a href="#">Ebooks</a></div>
-    <div class="menu" data-menu="nutricao"><a href="#">Nutrição</a></div>
-    <div class="menu" data-menu="bem-estar"><a href="#">Bem-estar</a></div>
-    <div class="dropdown-panel" id="dropdownPanel"></div>
+
+  
+    <nav class="menu-links" id="menuLinks">
+      <div class="menu" data-menu="dicas"><a href="#">Dicas</a></div>
+      <div class="menu" data-menu="ebooks"><a href="#">Ebooks</a></div>
+      <div class="menu" data-menu="nutricao"><a href="#">Nutrição</a></div>
+      <div class="menu" data-menu="bem-estar"><a href="#">Bem-estar</a></div>
+    </nav>
+      <div class="dropdown-panel" id="dropdownPanel"></div>
+
+    <!-- Menu lateral -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-submenu">
+          <a href="#">Dicas ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Dieta balanceada</a></li>
+            <li><a href="#">Exercícios leves</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Ebooks ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Guia Fitness</a></li>
+            <li><a href="#">Nutrição Essencial</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Nutrição ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Receitas</a></li>
+            <li><a href="#">Vitaminas</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Bem-estar ▼</a>
+          <ul class="submenu">
+            <li><a href="#">Meditação</a></li>
+            <li><a href="#">Sono</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay (fundo escuro pra fechar ao clicar fora) -->
+    <div class="overlay" id="overlay"></div>
+
   </header>
 
   <main class="page-content">
@@ -80,15 +123,11 @@
               que irá adequar a dieta de acordo com os 
               objetivos de cada pessoa e seu histórico 
               de saúde.</p>
-              <button class="first-button">AGENDE UMA CONSULTA NUTRICIONAL</button>
+              <button class="first-button-consult">AGENDE UMA CONSULTA NUTRICIONAL</button>
       </div>
-    </div>
+    </div>  
 
     <div class="container">
-      <div class="first-step">
-        <p><strong>CLIQUE NO BOTÃO PARA CALCULAR SEU IMC</strong></p>
-        <button class="first-button" onclick="go(1,2)">INICIAR</button>
-      </div>
       <div class="second-step">
         <h3 id="calc-title">CALCULADORA IMC</h3>
         <hr />
@@ -115,7 +154,6 @@
         <h3>RESULTADO!</h3>
         <p id="resultado"></p>
         <button class="first-button" onclick="go(3,2)">Calcular Novamente</button>
-        <button class="first-button" onclick="go(3,1)">Finalizar</button>
       </div>
     </div>
   </div><br>
@@ -136,72 +174,107 @@
         <p>Bora direto ao ponto. Melhorar o IMC (Índice de Massa Corporal) e o 
           condicionamento físico não depende só da idade, mas sim de 3 pilares 
           principais: alimentação, exercício e descanso.</p>
-      
-        <table class="info-table">
-        <tr>
-          <th class="first-info-th" colspan="5">ALIMENTAÇÃO</th>
-        </tr>
-        <tr>
-          <th class="second-info-th">Controle de calorias</th>
-          <th class="second-info-th">Proteínas</th>
-          <th class="second-info-th">Carboidratos inteligentes</th>
-          <th class="second-info-th">Gorduras boas</th>
-          <th class="second-info-th">Hidratação</th>
-        </tr>
-        <tr>
-          <td class="info-td">Se o objetivo é baixar o IMC, <br>precisa gastar mais do que consome; se for <br>ganhar massa magra, ajustar para um <br>leve superávit.</td>
-          <td class="info-td">Carnes magras, ovos, feijão, <br>lentilha, whey (se for usar suplemento). <br>Proteína ajuda no ganho <br>de músculo e na saciedade.</td>
-          <td class="info-td">Arroz integral, batata-doce, <br>mandioca, aveia, frutas. <br>Evita exagero de ultraprocessados.</td>
-          <td class="info-td">Azeite, castanhas, <br>abacate, sementes.</td>
-          <td class="info-td">30–35ml de água <br>por kg de peso.</td>
-        </tr>
-        </table>
-        <br><br><br>
 
-        <table class="info-table">
-        <tr>
-          <th class="first-info-th" colspan="4">EXERCÍCIOS</th>
-        </tr>
-        <tr>
-          <th class="second-info-th">Cardio (condicionamento)</th>
-          <th class="second-info-th">Força (ganho de massa e metabolismo mais acelerado)</th>
-          <th class="second-info-th">Mobilidade e alongamento</th>
-          <th class="second-info-th">Consistência</th>
-        </tr>
-        <tr>
-          <td class="info-td">Corrida leve, caminhada, bike, natação, jump rope. Começa leve e aumenta <br>a intensidade com <br>o tempo.</td>
-          <td class="info-td">Musculação, calistenia, crossfit. <BR>Ajuda a melhorar composição corporal (mesmo sem grande perda de peso na balança).</td>
-          <td class="info-td">Yoga, alongamentos dinâmicos. Evita lesão e melhora performance.</td>
-          <td class="info-td">Mínimo de 150 minutos de atividade moderada por semana (OMS), ou 75 de alta intensidade.</td>
-        </tr>
-        </table>
-        <br><br><br>
+          <div class="mobile-info">
+            <h3 class="first-info-mobile">ALIMENTAÇÃO</h3>
+            <p><strong>CONTROLE DE CALORIAS: </strong><br>Se o objetivo é baixar o IMC, precisa gastar mais do que consome; se for ganhar massa magra, ajustar para um leve superávit.</p>
+            <hr/>
+            <p><strong>PROTEÍNAS: </strong><br>Carnes magras, ovos, feijão, lentilha, whey (se for usar suplemento). Proteína ajuda no ganho de músculo e na saciedade.</p>
+            <hr/>
+            <p><strong>CARBOIDRATOS INTELIGENTES: </strong><br>Arroz integral, batata-doce, mandioca, aveia, frutas. Evita exagero de ultraprocessados.</p>
+            <hr/>
+            <p><strong>GORDURAS BOAS: </strong><br>Azeite, castanhas, abacate, sementes.</p>
+            <hr/>
+            <p><strong>HIDRATAÇÃO: </strong><br>30–35ml de água por kg de peso.</p>
 
-        <table class="info-table">
-        <tr>
-          <th class="first-info-th" colspan="4">DESCANSO</th>
-        </tr>
-        <tr>
-          <th class="second-info-th">Sono</th>
-          <th class="second-info-th">Estresse</th>
-          <th class="second-info-th">Rotina</th>
-          <th class="second-info-th">Exagero</th>
-        </tr>
-        <tr>
-          <td class="info-td">7 a 9h por noite. É no sono que <br>o corpo recupera e constrói músculo.</td>
-          <td class="info-td">Controlar ansiedade ajuda a manter <br>disciplina na dieta e treino.</td>
-          <td class="info-td">Pequenas mudanças diárias <br>> esforço extremo por pouco tempo.</td>
-          <td class="info-td">Treinar em excesso pode aumentar <BR>o estresse e o nível de cortisol, <BR>prejudicando seus objetivos. </td>                   
-        </tr>
-        </table>
+
+            <h3 class="first-info-mobile">EXERCÍCIOS</h3>
+            <p><strong>CÁRDIO (CONDICIONAMENTO): </strong><br>Corrida leve, caminhada, bike, natação, jump rope. Começa leve e aumenta a intensidade com o tempo.</p>
+            <hr/>
+            <p><strong>FORÇA (GANHO DE MASSA E METABOLISMO ACELERADO): </strong><br>Musculação, calistenia, crossfit. Ajuda a melhorar composição corporal (mesmo sem grande perda de peso na balança).</p>
+            <hr/>
+            <p><strong>MOBILIDADE E ALONGAMENTO: </strong><br>Yoga, alongamentos dinâmicos. Evita lesão e melhora performance</p>
+            <hr/>
+            <p><strong>CONSISTÊNCIA: </strong><br>Azeite, castanhas, abacate, sementes.</p>
+
+            <h3 class="first-info-mobile">DESCANSO</h3>
+            <p><strong>SONO: </strong><br>7 a 9h por noite. É no sono que o corpo recupera e constrói músculo.</p>
+            <hr/>
+            <p><strong>ESTRESSE: </strong><br>Controlar ansiedade ajuda a manter disciplina na dieta e treino.</p>
+            <hr/>
+            <p><strong>ROTINA: </strong><br>Pequenas mudanças diárias esforço extremo por pouco tempo.</p>
+            <hr/>
+            <p><strong>EXAGERO: </strong><br>Azeite, castanhas, abacate, sementes.</p>
+            <hr/>
+          </div>
+          
+          <div class="table-container">
+            <table class="info-table">
+            <tr>
+              <th class="first-info-th" colspan="5">ALIMENTAÇÃO</th>
+            </tr>
+            <tr>
+              <th class="second-info-th">Controle de calorias</th>
+              <th class="second-info-th">Proteínas</th>
+              <th class="second-info-th">Carboidratos inteligentes</th>
+              <th class="second-info-th">Gorduras boas</th>
+              <th class="second-info-th">Hidratação</th>
+            </tr>
+            <tr>
+              <td class="info-td">Se o objetivo é baixar o IMC, <br>precisa gastar mais do que consome; se for <br>ganhar massa magra, ajustar para um <br>leve superávit.</td>
+              <td class="info-td">Carnes magras, ovos, feijão, <br>lentilha, whey (se for usar suplemento). <br>Proteína ajuda no ganho <br>de músculo e na saciedade.</td>
+              <td class="info-td">Arroz integral, batata-doce, <br>mandioca, aveia, frutas. <br>Evita exagero de ultraprocessados.</td>
+              <td class="info-td">Azeite, castanhas, <br>abacate, sementes.</td>
+              <td class="info-td">30–35ml de água <br>por kg de peso.</td>
+            </tr>
+            </table>
+            <br><br><br>
+    
+            <table class="info-table">
+            <tr>
+              <th class="first-info-th" colspan="4">EXERCÍCIOS</th>
+            </tr>
+            <tr>
+              <th class="second-info-th">Cardio (condicionamento)</th>
+              <th class="second-info-th">Força (ganho de massa e metabolismo mais acelerado)</th>
+              <th class="second-info-th">Mobilidade e alongamento</th>
+              <th class="second-info-th">Consistência</th>
+            </tr>
+            <tr>
+              <td class="info-td">Corrida leve, caminhada, bike, natação, jump rope. Começa leve e aumenta <br>a intensidade com <br>o tempo.</td>
+              <td class="info-td">Musculação, calistenia, crossfit. <BR>Ajuda a melhorar composição corporal (mesmo sem grande perda de peso na balança).</td>
+              <td class="info-td">Yoga, alongamentos dinâmicos. Evita lesão e melhora performance.</td>
+              <td class="info-td">Mínimo de 150 minutos de atividade moderada por semana (OMS), ou 75 de alta intensidade.</td>
+            </tr>
+            </table>
+            <br><br><br>
+    
+            <table class="info-table">
+            <tr>
+              <th class="first-info-th" colspan="4">DESCANSO</th>
+            </tr>
+            <tr>
+              <th class="second-info-th">Sono</th>
+              <th class="second-info-th">Estresse</th>
+              <th class="second-info-th">Rotina</th>
+              <th class="second-info-th">Exagero</th>
+            </tr>
+            <tr>
+              <td class="info-td">7 a 9h por noite. É no sono que <br>o corpo recupera e constrói músculo.</td>
+              <td class="info-td">Controlar ansiedade ajuda a manter <br>disciplina na dieta e treino.</td>
+              <td class="info-td">Pequenas mudanças diárias <br>> esforço extremo por pouco tempo.</td>
+              <td class="info-td">Treinar em excesso pode aumentar <BR>o estresse e o nível de cortisol, <BR>prejudicando seus objetivos. </td>                   
+            </tr>
+            </table>
+        </div>  
         <br>
-        <p><b>Resumindo:</b> alimentação equilibrada + treino constante + descanso de qualidade = melhora do IMC e condicionamento físico em qualquer idade.</p>
+        <p class="p-final"><b>Resumindo:</b> alimentação equilibrada + treino constante + descanso de qualidade = melhora do IMC e condicionamento físico em qualquer idade.</p>
       </div>
       <div class="other-page">
     <div class="button-no">
       <img class="gif-img-2" src="./arnold.jpeg">
     </div>
-      <h3>Calma lááá! Como assim não precisa?!!</h3>
+      <h2>Calma lá! Como assim não precisa?!!</h2>
       <p>IMC e o condicionamento físico não são só papo de academia!</p>
       <p>O IMC dá uma noção básica se o peso tá adequado pra tua altura, não é perfeito, 
         mas já mostra se pode rolar algum risco de saúde. E o condicionamento físico é mais 
@@ -229,4 +302,3 @@
   </footer>
 </body>
 </html>
-
