@@ -41,29 +41,53 @@ html, body {
       color: white;
     }
 
-    .hamburger {
+    /* .hamburger {
       display: none;
       font-size: 2em;
       background: none;
       border: none;
       color: white;
       cursor: pointer;
+    } */
+
+    /* Nav normal em desktop */
+    .menu-links {
+      display: flex;
+      gap: 3em;
     }
 
-    .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: #4676a3;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    overflow-y: auto;
-  }
+    /* Hambúrguer e menu lateral ficam escondidos no desktop */
+    .menu-toggle,
+    .sidebar,
+    .overlay {
+      display: none;
+    }
+
+    /* Botão hambúrguer */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  color: white;
+  padding: 10px;
+}
+
+/* Menu lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #4676a3;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
 
 .sidebar.active {
   transform: translateX(0);
@@ -116,12 +140,6 @@ html, body {
   opacity: 1;
   visibility: visible;
 }
-
-    /* Nav normal em desktop */
-    .menu-links {
-      display: flex;
-      gap: 3em;
-    }
 
     .logo img {
       height: 70px;
@@ -262,7 +280,7 @@ html, body {
       font-size: 0.95em;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
       background: white;
-      height: 748px;
+      max-height: 748px;
     }
 
     .first-button-consult{
@@ -311,12 +329,9 @@ html, body {
       flex: 2;
       padding: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      margin-bottom: 0px;
+      margin-bottom: 10px;
       height: auto;
       overflow: visible;
-      border-radius: 5px;
-      background-color: rgba(0, 0, 0, 0.1);
-
     }
 
     .final-button-layout{
@@ -348,10 +363,6 @@ html, body {
       color: white;
       padding: 3px;
     }
-
-    .second-info-th, .info-td{
-      background: white;
-    }
     
     .gif-img{
       display: flex;
@@ -365,10 +376,6 @@ html, body {
       gap: 30px;
       align-items: flex-start;
       margin-bottom: 40px;
-    }
-
-    .button-yes{
-      margin-bottom: 0%;
     }
 
     .other-page{
@@ -405,8 +412,6 @@ html, body {
       box-shadow: 1px 1px 6px black;
       padding: 8px;
       margin-bottom: 10px;
-      border-radius: 5px;
-      background: white;
     }
 
     .mobile-info{
@@ -478,6 +483,7 @@ html, body {
     }
 
 
+
     .input-group {
       display: flex;
       align-items: center;
@@ -533,16 +539,17 @@ html, body {
     padding: 0 1em;
   }
 
-  /* Mostra hambúrguer */
-  .hamburger {
-    display: block;
-    z-index: 1100;
+  .logo {
+    margin-right: 30px;
+    scale: .7;
   }
 
-  .logo{
-    scale: .7;
-    display: flex;
-    margin-right: 15px;
+  .dropdown-panel{
+    position: static; /* deixa de ser absoluto */
+    background: none; /* tira o fundo branco */
+    box-shadow: none; /* tira sombra */
+    display: none; /* fica escondido inicialmente */
+    padding-left: 15px; /* identar um pouco pros subitens ficarem bonitos */
   }
 
   /* Esconde menu normal */
@@ -560,6 +567,10 @@ html, body {
     z-index: 1050;
   }
 
+  .menu-box{
+    margin-top: 40px;
+  }
+
   .menu-links a {
     display: block;
     color: white;
@@ -572,6 +583,14 @@ html, body {
   .menu-links.active {
     left: 0;
     display: flex;
+  }
+   .menu-toggle {
+    display: block; /* Mostra hambúrguer */
+  }
+
+  .sidebar,
+  .overlay {
+    display: block; /* Mas eles só ficam visíveis quando ativados no JS */
   }
 
   /* Conteúdo centralizado */
@@ -620,8 +639,6 @@ html, body {
     display: block;
     align-items: center;
     flex-direction: column;
-    background: white;
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
   }
 
   .first-info-mobile{
