@@ -12,57 +12,57 @@
   <div class="blur-overlay" id="blurOverlay"></div>
 
   <header id="header">
-    <button class="hamburger" id="hamburger">&#9776;</button>
+     <!-- Botão hamburguer (só aparece no mobile) -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
     <a href="index.html" class="logo" id="logoArea">
       <img src="https://w7.pngwing.com/pngs/808/253/png-transparent-health-fitness-and-wellness-workplace-wellness-austell-health-and-wellness-dr-keith-braswell-logo-health-blue-text-silhouette.png" alt="Logo Bem-estar">
     </a>
 
-  
-    <nav class="menu-links" id="menuLinks">
-      <div class="menu" data-menu="dicas"><a href="#">Dicas</a></div>
-      <div class="menu" data-menu="ebooks"><a href="#">Ebooks</a></div>
-      <div class="menu" data-menu="nutricao"><a href="#">Nutrição</a></div>
-      <div class="menu" data-menu="bem-estar"><a href="#">Bem-estar</a></div>
-    </nav>
-      <div class="dropdown-panel" id="dropdownPanel"></div>
+  <nav class="menu-links" id="menuLinks">
+    <div class="menu" data-menu="dicas"><a href="#">Dicas</a></div>
+    <div class="menu" data-menu="ebooks"><a href="#">Ebooks</a></div>
+    <div class="menu" data-menu="nutricao"><a href="#">Nutrição</a></div>
+    <div class="menu" data-menu="bem-estar"><a href="#">Bem-estar</a></div>
+  </nav>
+    <div class="dropdown-panel" id="dropdownPanel"></div>
 
-    <!-- Menu lateral -->
-    <nav class="sidebar" id="sidebar">
-      <ul>
-        <li class="has-submenu">
-          <a href="#">Dicas ▼</a>
-          <ul class="submenu">
-            <li><a href="#">Dieta balanceada</a></li>
-            <li><a href="#">Exercícios leves</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Ebooks ▼</a>
-          <ul class="submenu">
-            <li><a href="#">Guia Fitness</a></li>
-            <li><a href="#">Nutrição Essencial</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Nutrição ▼</a>
-          <ul class="submenu">
-            <li><a href="#">Receitas</a></li>
-            <li><a href="#">Vitaminas</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu">
-          <a href="#">Bem-estar ▼</a>
-          <ul class="submenu">
-            <li><a href="#">Meditação</a></li>
-            <li><a href="#">Sono</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
 
-    <!-- Overlay (fundo escuro pra fechar ao clicar fora) -->
-    <div class="overlay" id="overlay"></div>
+  <!-- Menu lateral (mobile) -->
+  <nav class="sidebar" id="sidebar">
+    <ul class="menu-box">
+      <li class="has-submenu">
+        <a href="#">Dicas ▼</a>
+        <ul class="submenu">
+          <li><a href="#">Dieta balanceada</a></li>
+          <li><a href="#">Exercícios leves</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Ebooks ▼</a>
+        <ul class="submenu">
+          <li><a href="#">Guia Fitness</a></li>
+          <li><a href="#">Nutrição Essencial</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Nutrição ▼</a>
+        <ul class="submenu">
+          <li><a href="#">Receitas</a></li>
+          <li><a href="#">Vitaminas</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Bem-estar ▼</a>
+        <ul class="submenu">
+          <li><a href="#">Meditação</a></li>
+          <li><a href="#">Sono</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
+  <!-- Overlay (fundo escuro pra fechar) -->
+  <div class="overlay" id="overlay"></div>
   </header>
 
   <main class="page-content">
@@ -125,7 +125,9 @@
               de saúde.</p>
               <button class="first-button-consult">AGENDE UMA CONSULTA NUTRICIONAL</button>
       </div>
-    </div>  
+    </div>
+
+    
 
     <div class="container">
       <div class="second-step">
@@ -205,7 +207,6 @@
             <p><strong>ROTINA: </strong><br>Pequenas mudanças diárias esforço extremo por pouco tempo.</p>
             <hr/>
             <p><strong>EXAGERO: </strong><br>Azeite, castanhas, abacate, sementes.</p>
-            <hr/>
           </div>
           
           <div class="table-container">
