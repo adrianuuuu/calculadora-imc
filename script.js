@@ -36,6 +36,33 @@
         });
       }
 
+      const menuToggle = document.getElementById("menu-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+      const submenus = document.querySelectorAll(".has-submenu > a");
+
+      // Abrir/fechar menu
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      // Fechar ao clicar fora
+      overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+
+      // Submenus no mobile
+      submenus.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault(); // impede navegação
+          const parent = link.parentElement;
+          parent.classList.toggle("active");
+        });
+      });
+
+
       function setActiveMenu(menuKey) {
         menus.forEach(menu => {
           menu.classList.toggle('active', menu.dataset.menu === menuKey);
